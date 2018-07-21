@@ -1,0 +1,24 @@
+{
+  "measurements": [
+    {
+      "date": "2012-02-22",
+      "temperature": "23.4",
+      "unit": "C"
+    },
+    {
+      "date": "2012-02-22",
+      "temperature": "34.4",
+      "unit": "C"
+    },
+    {
+      "date": "2012-02-22",
+      "temperature": "23.0",
+      "unit": "C"
+    },
+    {
+      "date": "2012-02-22",
+      "temperature": "11.2",
+      "unit": "K"
+    }
+  ]
+}
