@@ -2,10 +2,9 @@ package server.worker;
 
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.apache.log4j.Logger;
-import server.main.SegmentoCore;
+import server.main.ZodiacCore;
 import server.worker.pojo.json.Measurement;
 import server.worker.pojo.xml.AllMeasurementsDataBean;
-import server.worker.pojo.xml.DateDataBean;
 import server.worker.pojo.xml.YearDataBean;
 
 import java.io.File;
@@ -20,14 +19,14 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  * testSegmento
  */
 public class MeasurementConverter extends Thread {
-    public final static Queue<List<Measurement>> queue = new ConcurrentLinkedQueue<>();
+    public final static Queue<List<Measurement>> queue = new ConcurrentLinkedQueue<List<Measurement>>();
     private static final Logger LOG = Logger.getLogger(MeasurementConverter.class);
 
     private int waitDelay = 1000;
 
     public MeasurementConverter() {
         LOG.debug("Читаем настройки для конвертера");
-        waitDelay = Integer.valueOf(SegmentoCore.prop.getProperty("converter.wait.new.rq"));
+        waitDelay = Integer.valueOf(ZodiacCore.prop.getProperty("converter.wait.new.rq"));
 
     }
 

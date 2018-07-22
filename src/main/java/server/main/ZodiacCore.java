@@ -11,8 +11,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class SegmentoCore {
-    private static final Logger LOG = Logger.getLogger(SegmentoCore.class);
+public class ZodiacCore {
+    private static final Logger LOG = Logger.getLogger(ZodiacCore.class);
     public static final Properties prop = new Properties();
     private static int port = 8080;
 
