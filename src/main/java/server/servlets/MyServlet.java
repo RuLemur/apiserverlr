@@ -2,6 +2,7 @@ package server.servlets;
 
 import org.codehaus.jackson.map.ObjectMapper;
 import server.worker.MeasurementConverter;
+import server.worker.MeasurementValidator;
 import server.worker.pojo.InputJson;
 
 import javax.servlet.ServletException;
@@ -15,9 +16,12 @@ public class MyServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setCharacterEncoding("UTF-8");
-        resp.getWriter().println("СУСЕС");
+
         ObjectMapper om = new ObjectMapper();
         InputJson inputJson = om.readValue(req.getInputStream(), InputJson.class);
+
+        MeasurementValidator.validateAllFile(inputJson);
+        resp.getWriter().println("СУСЕС");
         System.out.println(inputJson);
         MeasurementConverter.queue.add(inputJson);
     }

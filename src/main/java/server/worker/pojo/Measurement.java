@@ -6,14 +6,14 @@ import java.util.Date;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Measurement {
-    double temperature;
+    String temperature;
     Date date;
     String unit;
 
     public Measurement() {
     }
 
-    public Measurement(Date date, double temperature, String unit) {
+    public Measurement(Date date, String temperature, String unit) {
         this.date = date;
         this.temperature = temperature;
         this.unit = unit;
@@ -27,11 +27,11 @@ public class Measurement {
         this.date = date;
     }
 
-    public double getTemperature() {
+    public String getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(double temperature) {
+    public void setTemperature(String temperature) {
         this.temperature = temperature;
     }
 
