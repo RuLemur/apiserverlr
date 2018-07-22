@@ -14,11 +14,11 @@ public class MyServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("POST");
-        resp.getWriter().println("asd");
+        resp.setCharacterEncoding("UTF-8");
+        resp.getWriter().println("СУСЕС");
         ObjectMapper om = new ObjectMapper();
-//        MeasurementConverter.syncJsonQueue.add( req.getInputStream(
         InputJson inputJson = om.readValue(req.getInputStream(), InputJson.class);
-        MeasurementConverter.syncJsonQueue.add(inputJson);
+        System.out.println(inputJson);
+        MeasurementConverter.queue.add(inputJson);
     }
 }

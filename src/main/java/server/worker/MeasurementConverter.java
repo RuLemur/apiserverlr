@@ -1,5 +1,7 @@
 package server.worker;
 
+import org.apache.log4j.Logger;
+import server.main.SegmentoCore;
 import server.worker.pojo.InputJson;
 
 import java.util.Queue;
@@ -10,16 +12,18 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  * testSegmento
  */
 public class MeasurementConverter extends Thread {
+    public final static Queue<InputJson> queue = new ConcurrentLinkedQueue<InputJson>();
+    private static final Logger LOG = Logger.getLogger(MeasurementConverter.class);
+
     private int waitDelay = 1000;
 
     public MeasurementConverter() {
-        System.out.println("create sub thread");
+        LOG.debug("Читаем настройки для конвертера");
+        waitDelay = Integer.valueOf(SegmentoCore.prop.getProperty("converter.wait.new.rq"));
+
     }
 
-    public final static Queue<InputJson> syncJsonQueue = new ConcurrentLinkedQueue<InputJson>() {
-    };
-
-    public void convert(InputJson take) {
+    private void convert(InputJson take) {
         System.out.println(take.toString() + "CONVERTED");
     }
 
@@ -27,16 +31,16 @@ public class MeasurementConverter extends Thread {
         System.out.println("thread was runned 2");
         while (true) {
 
-            if (syncJsonQueue.isEmpty()) {
+            if (queue.isEmpty()) {
                 try {
-                    this.sleep(waitDelay);
-                    System.out.println("thread waiting");
+                    sleep(waitDelay);
                 } catch (InterruptedException e) {
                     //TODO: log
                     e.printStackTrace();
                 }
             } else {
-                convert(syncJsonQueue.poll());
+                LOG.debug("В очереде появилось значение, запускаем конвертер");
+                convert(queue.poll());
 
             }
         }
