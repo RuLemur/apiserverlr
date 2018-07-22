@@ -3,13 +3,15 @@ package server.servlets;
 import org.codehaus.jackson.map.ObjectMapper;
 import server.worker.MeasurementConverter;
 import server.worker.MeasurementValidator;
-import server.worker.pojo.InputJson;
+import server.worker.pojo.json.InputJson;
+import server.worker.pojo.json.Measurement;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 public class MyServlet extends HttpServlet {
 
@@ -20,9 +22,9 @@ public class MyServlet extends HttpServlet {
         ObjectMapper om = new ObjectMapper();
         InputJson inputJson = om.readValue(req.getInputStream(), InputJson.class);
 
-        MeasurementValidator.validateAllFile(inputJson);
+        List<Measurement> measurements = MeasurementValidator.validateAllFile(inputJson);
         resp.getWriter().println("СУСЕС");
-        System.out.println(inputJson);
-        MeasurementConverter.queue.add(inputJson);
+        //TODO: обработка пустых файлов
+        MeasurementConverter.queue.add(measurements);
     }
 }

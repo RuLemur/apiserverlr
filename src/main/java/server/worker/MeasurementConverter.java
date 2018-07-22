@@ -2,8 +2,9 @@ package server.worker;
 
 import org.apache.log4j.Logger;
 import server.main.SegmentoCore;
-import server.worker.pojo.InputJson;
+import server.worker.pojo.json.Measurement;
 
+import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
@@ -12,7 +13,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  * testSegmento
  */
 public class MeasurementConverter extends Thread {
-    public final static Queue<InputJson> queue = new ConcurrentLinkedQueue<InputJson>();
+    public final static Queue<List<Measurement>> queue = new ConcurrentLinkedQueue<>();
     private static final Logger LOG = Logger.getLogger(MeasurementConverter.class);
 
     private int waitDelay = 1000;
@@ -23,19 +24,21 @@ public class MeasurementConverter extends Thread {
 
     }
 
-    private void convert(InputJson take) {
-        System.out.println(take.toString() + "CONVERTED");
+    private void convert(List<Measurement> measurements) {
+        LOG.info("Начинаем процесс конвертации в XML");
     }
 
+    /**
+     * Запуск в отдельный поток конвертера
+     */
     public void run() {
         System.out.println("thread was runned 2");
         while (true) {
-
             if (queue.isEmpty()) {
                 try {
                     sleep(waitDelay);
                 } catch (InterruptedException e) {
-                    //TODO: log
+                    LOG.error("Ошибка ожидания");
                     e.printStackTrace();
                 }
             } else {

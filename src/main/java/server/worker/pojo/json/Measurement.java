@@ -1,4 +1,4 @@
-package server.worker.pojo;
+package server.worker.pojo.json;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
@@ -45,6 +45,6 @@ public class Measurement {
 
     @Override
     public String toString() {
-        return "Date: " + date.toString() + ", Temperature: " + temperature + " Unit: " + unit + "\n";
+        return "Date: " + date.toString() + ", Temperature: " + temperature + " Unit: " + unit;
     }
 }
