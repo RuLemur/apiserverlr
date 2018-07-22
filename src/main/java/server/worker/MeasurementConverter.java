@@ -1,9 +1,16 @@
 package server.worker;
 
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.apache.log4j.Logger;
 import server.main.SegmentoCore;
 import server.worker.pojo.json.Measurement;
+import server.worker.pojo.xml.AllMeasurementsDataBean;
+import server.worker.pojo.xml.DateDataBean;
+import server.worker.pojo.xml.YearDataBean;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -24,9 +31,17 @@ public class MeasurementConverter extends Thread {
 
     }
 
-    private void convert(List<Measurement> measurements) {
+    private void convert(List<Measurement> measurements)  {
         LOG.info("Начинаем процесс конвертации в XML");
+        XmlMapper xmlMapper = new XmlMapper();
+        try {
+            xmlMapper.writeValue(new File("simple_bean.xml"), new AllMeasurementsDataBean(new ArrayList<YearDataBean>(), 1, 3, 4, 5));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
+//    private List<DateDataBean>
 
     /**
      * Запуск в отдельный поток конвертера
