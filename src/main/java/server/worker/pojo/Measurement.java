@@ -1,10 +1,13 @@
 package server.worker.pojo;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 import java.util.Date;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Measurement {
-    Date date;
     double temperature;
+    Date date;
     String unit;
 
     public Measurement() {
@@ -38,5 +41,10 @@ public class Measurement {
 
     public void setUnit(String unit) {
         this.unit = unit;
+    }
+
+    @Override
+    public String toString() {
+        return "Date: " + date.toString() + ", Temperature: " + temperature + " Unit: " + unit + "\n";
     }
 }

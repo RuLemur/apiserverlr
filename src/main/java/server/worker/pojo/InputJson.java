@@ -1,7 +1,13 @@
 package server.worker.pojo;
 
+
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class InputJson {
     List<Measurement> measurements;
 
@@ -10,7 +16,6 @@ public class InputJson {
     }
 
     public InputJson(){
-
     }
 
     public List<Measurement> getMeasurements() {
@@ -19,5 +24,10 @@ public class InputJson {
 
     public void setMeasurements(List<Measurement> measurements) {
         this.measurements = measurements;
+    }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(measurements.toArray());
     }
 }
