@@ -5,6 +5,7 @@ import server.helpers.TempConverter;
 import server.worker.pojo.json.InputJson;
 import server.worker.pojo.json.Measurement;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
