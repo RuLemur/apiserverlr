@@ -3,76 +3,98 @@ package server.worker.pojo.xml;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by RuLemur on 22.07.2018 in 22:46.
- * testSegmento
+ * testZodiac
  */
 @JacksonXmlRootElement(localName = "month")
 public class MonthDataBean {
     @JacksonXmlProperty(isAttribute = true)
-    short value;
+    String value;
 
     @JacksonXmlProperty(isAttribute = true)
-    short max;
+    String max;
 
     @JacksonXmlProperty(isAttribute = true)
-    short min;
+    String min;
 
     @JacksonXmlProperty(isAttribute = true)
-    int avg;
+    String avg;
 
-    List<DateDataBean> monthData;
+    List<DayDataBean> dayDataBeans = new ArrayList<>();
 
-    public MonthDataBean(short value, short max, short min, int avg, List<DateDataBean> monthData) {
+    public MonthDataBean(String value, String  max, String  min, String  avg, List<DayDataBean> dayDataBeans) {
         this.value = value;
         this.max = max;
         this.min = min;
         this.avg = avg;
-        this.monthData = monthData;
+        this.dayDataBeans = dayDataBeans;
     }
 
     public MonthDataBean() {
     }
 
-    public List<DateDataBean> getMonthData() {
-        return monthData;
+    public List<DayDataBean> getDayDataBeans() {
+        return dayDataBeans;
     }
 
-    public void setMonthData(List<DateDataBean> monthData) {
-        this.monthData = monthData;
+    public void setDayDataBeans(List<DayDataBean> dayDataBeans) {
+        this.dayDataBeans = dayDataBeans;
     }
 
-    public short getValue() {
+    public DayDataBean getDayDataBean(String day) {
+        for (DayDataBean dayDataBean : dayDataBeans) {
+            if (dayDataBean.getDay() == String.valueOf(day)) {
+                return dayDataBean;
+            }
+
+        }
+        return null;
+    }
+
+    public void setDayDataBean(String day, DayDataBean dayDataBean) {
+        for (int i = 0; i < dayDataBeans.size(); i++) {
+            if (dayDataBeans.get(i).getDay() == String.valueOf(day)) {
+                dayDataBeans.set(i, dayDataBean);
+            }
+            return;
+        }
+        dayDataBeans.add(dayDataBean);
+
+    }
+
+    public String getValue() {
         return value;
     }
 
-    public void setValue(short value) {
+    public void setValue(String value) {
         this.value = value;
     }
 
-    public short getMax() {
+    public String getMax() {
         return max;
     }
 
-    public void setMax(short max) {
+    public void setMax(String max) {
         this.max = max;
     }
 
-    public short getMin() {
+    public String getMin() {
         return min;
     }
 
-    public void setMin(short min) {
+    public void setMin(String min) {
         this.min = min;
     }
 
-    public int getAvg() {
+    public String getAvg() {
         return avg;
     }
 
-    public void setAvg(int avg) {
+    public void setAvg(String avg) {
         this.avg = avg;
     }
 }

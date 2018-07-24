@@ -1,34 +1,37 @@
 package server.worker.pojo.xml;
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by RuLemur on 22.07.2018 in 22:46.
  * testSegmento
  */
-@JacksonXmlRootElement(localName = "year")
+@JsonTypeName("year")
 public class YearDataBean {
     @JacksonXmlProperty(isAttribute = true)
-    short value;
+    String value;
 
     @JacksonXmlProperty(isAttribute = true)
-    short max;
+    String max;
 
     @JacksonXmlProperty(isAttribute = true)
-    short min;
+    String min;
 
     @JacksonXmlProperty(isAttribute = true)
-    int avg;
+    String avg;
 
-    List<MonthDataBean> monthDataBeans;
+    List<MonthDataBean> monthDataBeans = new ArrayList<>();
 
     public YearDataBean() {
     }
 
-    public YearDataBean(short value, short max, short min, int avg, List<MonthDataBean> monthDataBeans) {
+    public YearDataBean(String value, String max, String min, String avg, List<MonthDataBean> monthDataBeans) {
         this.value = value;
         this.max = max;
         this.min = min;
@@ -36,35 +39,35 @@ public class YearDataBean {
         this.monthDataBeans = monthDataBeans;
     }
 
-    public short getValue() {
+    public String getValue() {
         return value;
     }
 
-    public void setValue(short value) {
+    public void setValue(String value) {
         this.value = value;
     }
 
-    public short getMax() {
+    public String getMax() {
         return max;
     }
 
-    public void setMax(short max) {
+    public void setMax(String max) {
         this.max = max;
     }
 
-    public short getMin() {
+    public String getMin() {
         return min;
     }
 
-    public void setMin(short min) {
+    public void setMin(String min) {
         this.min = min;
     }
 
-    public int getAvg() {
+    public String getAvg() {
         return avg;
     }
 
-    public void setAvg(int avg) {
+    public void setAvg(String avg) {
         this.avg = avg;
     }
 
@@ -74,5 +77,26 @@ public class YearDataBean {
 
     public void setMonthDataBeans(List<MonthDataBean> monthDataBeans) {
         this.monthDataBeans = monthDataBeans;
+    }
+
+    public MonthDataBean getMonthDataBean(String month) {
+        for (MonthDataBean monthDataBean : monthDataBeans) {
+            if (monthDataBean.getValue() == String.valueOf(month)) {
+                return monthDataBean;
+            }
+
+        }
+        return null;
+    }
+
+    public void setMonthDataBean(String month, MonthDataBean monthDataBean) {
+        for (int i = 0; i < monthDataBeans.size(); i++) {
+            if (monthDataBeans.get(i).getValue() == String.valueOf(month)) {
+                monthDataBeans.set(i, monthDataBean);
+            }
+            return;
+        }
+        monthDataBeans.add(monthDataBean);
+
     }
 }

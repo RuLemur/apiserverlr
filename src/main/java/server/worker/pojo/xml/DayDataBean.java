@@ -9,41 +9,41 @@ import java.util.Date;
  * testSegmento
  */
 @JacksonXmlRootElement(localName = "date")
-public class DateDataBean {
-    Date day;
-    short temperature;
-    short avgTemperature;
+public class DayDataBean {
+    String day;
+    String temperature;
+    String avgTemperature;
 
-    public DateDataBean(Date day, short temperature, short avgTemperature) {
+    public DayDataBean(String day, String temperature, String avgTemperature) {
         this.day = day;
         this.temperature = temperature;
         this.avgTemperature = avgTemperature;
     }
 
-    public DateDataBean() {
+    public DayDataBean() {
     }
 
-    public Date getDay() {
+    public String getDay() {
         return day;
     }
 
-    public void setDay(Date day) {
+    public void setDay(String day) {
         this.day = day;
     }
 
-    public short getTemperature() {
+    public String getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(short temperature) {
+    public void setTemperature(String temperature) {
         this.temperature = temperature;
     }
 
-    public short getAvgTemperature() {
+    public String getAvgTemperature() {
         return avgTemperature;
     }
 
-    public void setAvgTemperature(short avgTemperature) {
+    public void setAvgTemperature(String avgTemperature) {
         this.avgTemperature = avgTemperature;
     }
 }
