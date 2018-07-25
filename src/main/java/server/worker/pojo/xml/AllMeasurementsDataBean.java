@@ -4,35 +4,33 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlValue;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by RuLemur on 22.07.2018 in 22:43.
- * testSegmento
+ * testZodiac
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+//@XmlAccessorType(XmlAccessType.FIELD)
 @JacksonXmlRootElement(localName = "measurement")
 public class AllMeasurementsDataBean {
-    @XmlValue
+
     @JacksonXmlElementWrapper(useWrapping = false)
-    List<YearDataBean> yearDataBeans = new ArrayList<>();
+    List<Year> years = new ArrayList<>();
 
     @JacksonXmlProperty(isAttribute = true)
     int total;
     @JacksonXmlProperty(isAttribute = true)
-    int max;
+    int max = Short.MIN_VALUE;
     @JacksonXmlProperty(isAttribute = true)
-    int min;
+    int min = Short.MAX_VALUE;
     @JacksonXmlProperty(isAttribute = true)
     int avg;
 
-    public AllMeasurementsDataBean(List<YearDataBean> yearDataBeans, int total, int max, int min, int avg) {
-        this.yearDataBeans = yearDataBeans;
+    int avgSum = 0;
+
+    public AllMeasurementsDataBean(List<Year> years, int total, int max, int min, int avg) {
+        this.years = years;
         this.total = total;
         this.max = max;
         this.min = min;
@@ -43,32 +41,39 @@ public class AllMeasurementsDataBean {
     }
 
 
-    public List<YearDataBean> getYearDataBeans() {
-        return yearDataBeans;
+    public List<Year> getYears() {
+        return years;
     }
 
-    public void setYearDataBeans( List<YearDataBean> yearDataBeans) {
-        this.yearDataBeans = yearDataBeans;
+    public void setYears(List<Year> years) {
+        this.years = years;
     }
 
-    public YearDataBean getYearDataBean(String year) {
-        for (YearDataBean yearDataBean : yearDataBeans) {
-            if (yearDataBean.getValue() == String.valueOf(year)) {
+    public Year getYearDataBean(String year) {
+        for (Year yearDataBean : years) {
+            if (String.valueOf(year).equals(yearDataBean.getValue())) {
                 return yearDataBean;
             }
 
         }
-        return null;
+        return new Year(year);
     }
 
-    public void setYearDataBean(String year, YearDataBean yearDataBean) {
-        for (int i = 0; i < yearDataBeans.size(); i++) {
-            if (yearDataBeans.get(i).getValue() == String.valueOf(year)) {
-                yearDataBeans.set(i, yearDataBean);
+    public void setYearDataBean(Year yearDataBean) {
+        total++;
+
+        max = (int) yearDataBean.getMax() > max ? (int) yearDataBean.getMax() : max;
+        min = (int) yearDataBean.getMax() < min ? (int) yearDataBean.getMax() : min;
+
+        avgSum += (int) yearDataBean.getAvg();
+        avg = avgSum / (years.size() + 1);
+        for (int i = 0; i < years.size(); i++) {
+            if (String.valueOf(yearDataBean.getValue()).equals(years.get(i).getValue())) {
+                years.set(i, yearDataBean);
+                return;
             }
-            return;
         }
-        yearDataBeans.add(yearDataBean);
+        years.add(yearDataBean);
 
     }
 

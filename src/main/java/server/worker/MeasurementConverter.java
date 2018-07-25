@@ -5,26 +5,24 @@ import org.apache.log4j.Logger;
 import server.main.ZodiacCore;
 import server.worker.pojo.json.Measurement;
 import server.worker.pojo.xml.AllMeasurementsDataBean;
-import server.worker.pojo.xml.DayDataBean;
-import server.worker.pojo.xml.MonthDataBean;
-import server.worker.pojo.xml.YearDataBean;
+import server.worker.pojo.xml.Day;
+import server.worker.pojo.xml.Month;
+import server.worker.pojo.xml.Year;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.Locale;
+import java.util.Random;
 
 /**
  * Created by RuLemur on 22.07.2018 in 15:05.
  * testZodiac
  */
-public class MeasurementConverter extends Thread {
-    public final static Queue<List<Measurement>> queue = new ConcurrentLinkedQueue<List<Measurement>>();
+public class MeasurementConverter { //extends Thread
+    //    public final static Queue<List<Measurement>> queue = new ConcurrentLinkedQueue<List<Measurement>>();
     private static final Logger LOG = Logger.getLogger(MeasurementConverter.class);
 
     private int waitDelay = 1000;
@@ -35,88 +33,65 @@ public class MeasurementConverter extends Thread {
 
     }
 
-    private void convert(List<Measurement> measurements) {
+    public String convert(List<Measurement> measurements) {
         LOG.info("Начинаем процесс конвертации в XML");
-//        System.out.println(typeConvert(measurements));
         XmlMapper xmlMapper = new XmlMapper();
         try {
-            xmlMapper.writeValue(new File("simple_bean.xml"), typeConvert(measurements));
+            Random rnd = new Random();
+            String filePath = ZodiacCore.prop.getProperty("reports.path") + "result_" + rnd.nextInt(10000) + ".xml";
+            File report = new File(filePath);
+            AllMeasurementsDataBean value = typeConvert(measurements);
+            xmlMapper.writeValue(report, value);
+            return xmlMapper.writeValueAsString(value);
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return null;
     }
 
     private AllMeasurementsDataBean typeConvert(List<Measurement> measurements) {
-//        Map<String, HashMap<String, HashMap<String, String>>> meshMap = new HashMap<>();
         AllMeasurementsDataBean jsonDataBean = new AllMeasurementsDataBean();
-        DateFormat dayFormat = new SimpleDateFormat("dd");
-        DateFormat monthFormat = new SimpleDateFormat("MM");
-        DateFormat yearFormat = new SimpleDateFormat("yyyy");
+        jsonDataBean.setTotal(measurements.size());
 
+        DateFormat dayFormat = new SimpleDateFormat("dd");
+        DateFormat monthFormat = new SimpleDateFormat("MMMM", Locale.getDefault());
+        DateFormat yearFormat = new SimpleDateFormat("yyyy");
 
         for (Measurement mesh : measurements) {
             String meshYear = yearFormat.format(mesh.getDate());
             String meshMonth = monthFormat.format(mesh.getDate());
             String meshDay = dayFormat.format(mesh.getDate());
 
-            YearDataBean yearDataBean = jsonDataBean.getYearDataBean(meshYear);
-            if (null != yearDataBean) {
-                MonthDataBean monthDataBean = yearDataBean.getMonthDataBean(meshMonth);
-                if (null != monthDataBean) {
-                    DayDataBean dayDataBean = monthDataBean.getDayDataBean(meshDay);
-                    if (null != dayDataBean) {
-                        String newValue = dayDataBean.getTemperature() + "," + mesh.getTemperature();
-                        dayDataBean.setTemperature(newValue);
-                        monthDataBean.setDayDataBean(meshDay,dayDataBean);
-                    } else {
-                        dayDataBean = new DayDataBean();
-                        dayDataBean.setTemperature(mesh.getTemperature());
-                        monthDataBean.setDayDataBean(meshDay,dayDataBean);
-                    }
-                } else {
-                    DayDataBean dayDataBean = new DayDataBean();
-                    dayDataBean.setTemperature(mesh.getTemperature());
-                    dayDataBean.setDay(meshDay);
+            Year year = jsonDataBean.getYearDataBean(meshYear);
+            Month month = year.getMonthDataBean(meshMonth);
+            Day day = month.getDayDataBean(meshDay, mesh.getTemperature());
 
-                    monthDataBean.setDayDataBean(meshDay, dayDataBean);
-                    yearDataBean.setMonthDataBean(meshMonth, monthDataBean);
-                }
-            } else {
-
-                DayDataBean dayDataBean = new DayDataBean();
-                dayDataBean.setTemperature(mesh.getTemperature());
-                dayDataBean.setDay(meshDay);
-
-                MonthDataBean monthDataBean = new MonthDataBean();
-                monthDataBean.setDayDataBean(meshDay, dayDataBean);
-
-                yearDataBean = new YearDataBean();
-                yearDataBean.setMonthDataBean(meshMonth, monthDataBean);
-            }
-            jsonDataBean.setYearDataBean(meshYear, yearDataBean);
+            month.setDayDataBean(day);
+            year.setMonthDataBean(month);
+            jsonDataBean.setYearDataBean(year);
         }
+
         return jsonDataBean;
     }
-//    private List<DayDataBean>
 
-    /**
-     * Запуск в отдельный поток конвертера
-     */
-    public void run() {
-        System.out.println("thread was runned 2");
-        while (true) {
-            if (queue.isEmpty()) {
-                try {
-                    sleep(waitDelay);
-                } catch (InterruptedException e) {
-                    LOG.error("Ошибка ожидания");
-                    e.printStackTrace();
-                }
-            } else {
-                LOG.debug("В очереде появилось значение, запускаем конвертер");
-                convert(queue.poll());
-
-            }
-        }
-    }
+//    /**
+//     * Запуск в отдельный поток конвертера
+//     */
+//    public void run() {
+//        LOG.info("Запушен конвертер в отедльном потоке");
+//        while (true) {
+//            if (queue.isEmpty()) {
+//                try {
+//                    sleep(waitDelay);
+//                } catch (InterruptedException e) {
+//                    LOG.error("Ошибка ожидания");
+//                    e.printStackTrace();
+//                }
+//            } else {
+//                LOG.debug("В очереде появилось значение, запускаем конвертер");
+//                convert(queue.poll());
+//
+//            }
+//        }
+//    }
 }

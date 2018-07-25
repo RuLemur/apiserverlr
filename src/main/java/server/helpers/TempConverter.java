@@ -2,7 +2,7 @@ package server.helpers;
 
 /**
  * Created by RuLemur on 22.07.2018 in 21:29.
- * testSegmento
+ * testZodiac
  */
 public class TempConverter {
 
@@ -36,6 +36,5 @@ public class TempConverter {
                 return (short) (fromTemp - 273.15);
         }
         return 0;
-//        throw new Exception("Ощибка перевода велечин: Неизвестная велечина");
     }
 }

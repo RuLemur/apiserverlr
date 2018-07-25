@@ -1,0 +1,634 @@
+<measurement total="152" max="290" min="-573" avg="-126">
+    <years value="1909" max="110" min="-170" avg="103">
+        <months value="Май" max="110" min="-170" avg="30">
+            <date>
+                <day>31</day>
+                <temperature>110,-87,-170</temperature>
+                <avgTemperature>-73</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="2010" max="-177" min="-177" avg="-177">
+        <months value="Апрель" max="-177" min="-177" avg="-177">
+            <date>
+                <day>27</day>
+                <temperature>-177</temperature>
+                <avgTemperature>-177</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1977" max="127" min="78" avg="102">
+        <months value="Сентябрь" max="127" min="127" avg="127">
+            <date>
+                <day>27</day>
+                <temperature>127</temperature>
+                <avgTemperature>127</avgTemperature>
+            </date>
+        </months>
+        <months value="Январь" max="78" min="78" avg="78">
+            <date>
+                <day>07</day>
+                <temperature>78</temperature>
+                <avgTemperature>78</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="2006" max="-79" min="-79" avg="-79">
+        <months value="Ноябрь" max="-79" min="-79" avg="-79">
+            <date>
+                <day>10</day>
+                <temperature>-79</temperature>
+                <avgTemperature>-79</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1943" max="-72" min="-72" avg="-72">
+        <months value="Февраль" max="-72" min="-72" avg="-72">
+            <date>
+                <day>14</day>
+                <temperature>-72</temperature>
+                <avgTemperature>-72</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1984" max="-282" min="-282" avg="-282">
+        <months value="Май" max="-282" min="-282" avg="-282">
+            <date>
+                <day>15</day>
+                <temperature>-282</temperature>
+                <avgTemperature>-282</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1947" max="84" min="84" avg="84">
+        <months value="Декабрь" max="84" min="84" avg="84">
+            <date>
+                <day>17</day>
+                <temperature>84</temperature>
+                <avgTemperature>84</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1950" max="199" min="-184" avg="7">
+        <months value="Февраль" max="-184" min="-184" avg="-184">
+            <date>
+                <day>09</day>
+                <temperature>-184</temperature>
+                <avgTemperature>-184</avgTemperature>
+            </date>
+        </months>
+        <months value="Июнь" max="199" min="199" avg="199">
+            <date>
+                <day>30</day>
+                <temperature>199</temperature>
+                <avgTemperature>199</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1946" max="-40" min="-40" avg="-40">
+        <months value="Ноябрь" max="-40" min="-40" avg="-40">
+            <date>
+                <day>25</day>
+                <temperature>-40</temperature>
+                <avgTemperature>-40</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1976" max="152" min="152" avg="152">
+        <months value="Февраль" max="152" min="152" avg="152">
+            <date>
+                <day>14</day>
+                <temperature>152</temperature>
+                <avgTemperature>152</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1991" max="5" min="5" avg="5">
+        <months value="Ноябрь" max="5" min="5" avg="5">
+            <date>
+                <day>08</day>
+                <temperature>5</temperature>
+                <avgTemperature>5</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="2018" max="-27" min="-56" avg="-41">
+        <months value="Октябрь" max="-56" min="-56" avg="-56">
+            <date>
+                <day>04</day>
+                <temperature>-56</temperature>
+                <avgTemperature>-56</avgTemperature>
+            </date>
+        </months>
+        <months value="Июль" max="-27" min="-27" avg="-27">
+            <date>
+                <day>19</day>
+                <temperature>-27</temperature>
+                <avgTemperature>-27</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1919" max="-57" min="-57" avg="-57">
+        <months value="Июль" max="-57" min="-57" avg="-57">
+            <date>
+                <day>22</day>
+                <temperature>-57</temperature>
+                <avgTemperature>-57</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1974" max="81" min="-283" avg="-128">
+        <months value="Апрель" max="-182" min="-182" avg="-182">
+            <date>
+                <day>21</day>
+                <temperature>-182</temperature>
+                <avgTemperature>-182</avgTemperature>
+            </date>
+        </months>
+        <months value="Октябрь" max="81" min="81" avg="81">
+            <date>
+                <day>01</day>
+                <temperature>81</temperature>
+                <avgTemperature>81</avgTemperature>
+            </date>
+        </months>
+        <months value="Июнь" max="-283" min="-283" avg="-283">
+            <date>
+                <day>02</day>
+                <temperature>-283</temperature>
+                <avgTemperature>-283</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1975" max="-336" min="-336" avg="-336">
+        <months value="Февраль" max="-336" min="-336" avg="-336">
+            <date>
+                <day>26</day>
+                <temperature>-336</temperature>
+                <avgTemperature>-336</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1931" max="-19" min="-410" avg="-214">
+        <months value="Август" max="-19" min="-19" avg="-19">
+            <date>
+                <day>13</day>
+                <temperature>-19</temperature>
+                <avgTemperature>-19</avgTemperature>
+            </date>
+        </months>
+        <months value="Май" max="-410" min="-410" avg="-410">
+            <date>
+                <day>03</day>
+                <temperature>-410</temperature>
+                <avgTemperature>-410</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="2021" max="-221" min="-243" avg="-232">
+        <months value="Ноябрь" max="-243" min="-243" avg="-243">
+            <date>
+                <day>19</day>
+                <temperature>-243</temperature>
+                <avgTemperature>-243</avgTemperature>
+            </date>
+        </months>
+        <months value="Январь" max="-221" min="-221" avg="-221">
+            <date>
+                <day>15</day>
+                <temperature>-221</temperature>
+                <avgTemperature>-221</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1951" max="28" min="28" avg="28">
+        <months value="Март" max="28" min="28" avg="28">
+            <date>
+                <day>10</day>
+                <temperature>28</temperature>
+                <avgTemperature>28</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1966" max="178" min="178" avg="178">
+        <months value="Апрель" max="178" min="178" avg="178">
+            <date>
+                <day>21</day>
+                <temperature>178</temperature>
+                <avgTemperature>178</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1935" max="290" min="-216" avg="37">
+        <months value="Декабрь" max="-216" min="-216" avg="-216">
+            <date>
+                <day>03</day>
+                <temperature>-216</temperature>
+                <avgTemperature>-216</avgTemperature>
+            </date>
+        </months>
+        <months value="Февраль" max="290" min="290" avg="290">
+            <date>
+                <day>01</day>
+                <temperature>290</temperature>
+                <avgTemperature>290</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="2024" max="12" min="-572" avg="-280">
+        <months value="Март" max="12" min="12" avg="12">
+            <date>
+                <day>09</day>
+                <temperature>12</temperature>
+                <avgTemperature>12</avgTemperature>
+            </date>
+        </months>
+        <months value="Октябрь" max="-572" min="-572" avg="-572">
+            <date>
+                <day>25</day>
+                <temperature>-572</temperature>
+                <avgTemperature>-572</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1923" max="3" min="-271" avg="-147">
+        <months value="Февраль" max="-271" min="-271" avg="-271">
+            <date>
+                <day>23</day>
+                <temperature>-271</temperature>
+                <avgTemperature>-271</avgTemperature>
+            </date>
+        </months>
+        <months value="Декабрь" max="3" min="3" avg="3">
+            <date>
+                <day>16</day>
+                <temperature>3</temperature>
+                <avgTemperature>3</avgTemperature>
+            </date>
+        </months>
+        <months value="Май" max="-175" min="-175" avg="-175">
+            <date>
+                <day>10</day>
+                <temperature>-175</temperature>
+                <avgTemperature>-175</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1944" max="84" min="80" avg="82">
+        <months value="Май" max="80" min="80" avg="80">
+            <date>
+                <day>27</day>
+                <temperature>80</temperature>
+                <avgTemperature>80</avgTemperature>
+            </date>
+        </months>
+        <months value="Февраль" max="84" min="84" avg="84">
+            <date>
+                <day>13</day>
+                <temperature>84</temperature>
+                <avgTemperature>84</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1916" max="36" min="36" avg="36">
+        <months value="Ноябрь" max="36" min="36" avg="36">
+            <date>
+                <day>30</day>
+                <temperature>36</temperature>
+                <avgTemperature>36</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1990" max="97" min="97" avg="97">
+        <months value="Сентябрь" max="97" min="97" avg="97">
+            <date>
+                <day>17</day>
+                <temperature>97</temperature>
+                <avgTemperature>97</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1945" max="-248" min="-248" avg="-248">
+        <months value="Сентябрь" max="-248" min="-248" avg="-248">
+            <date>
+                <day>01</day>
+                <temperature>-248</temperature>
+                <avgTemperature>-248</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1930" max="58" min="-530" avg="-236">
+        <months value="Август" max="58" min="58" avg="58">
+            <date>
+                <day>24</day>
+                <temperature>58</temperature>
+                <avgTemperature>58</avgTemperature>
+            </date>
+        </months>
+        <months value="Февраль" max="-530" min="-530" avg="-530">
+            <date>
+                <day>18</day>
+                <temperature>-530</temperature>
+                <avgTemperature>-530</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="2000" max="56" min="-166" avg="-55">
+        <months value="Август" max="56" min="56" avg="56">
+            <date>
+                <day>06</day>
+                <temperature>56</temperature>
+                <avgTemperature>56</avgTemperature>
+            </date>
+        </months>
+        <months value="Май" max="-166" min="-166" avg="-166">
+            <date>
+                <day>15</day>
+                <temperature>-166</temperature>
+                <avgTemperature>-166</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1955" max="30" min="-510" avg="-105">
+        <months value="Март" max="30" min="-510" avg="-240">
+            <date>
+                <day>15</day>
+                <temperature>30</temperature>
+                <avgTemperature>30</avgTemperature>
+            </date>
+            <date>
+                <day>31</day>
+                <temperature>-510</temperature>
+                <avgTemperature>-510</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1936" max="-175" min="-175" avg="-175">
+        <months value="Июль" max="-175" min="-175" avg="-175">
+            <date>
+                <day>14</day>
+                <temperature>-175</temperature>
+                <avgTemperature>-175</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1924" max="-282" min="-282" avg="-282">
+        <months value="Апрель" max="-282" min="-282" avg="-282">
+            <date>
+                <day>28</day>
+                <temperature>-282</temperature>
+                <avgTemperature>-282</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="2026" max="-337" min="-337" avg="-337">
+        <months value="Сентябрь" max="-337" min="-337" avg="-337">
+            <date>
+                <day>24</day>
+                <temperature>-337</temperature>
+                <avgTemperature>-337</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1992" max="205" min="205" avg="205">
+        <months value="Август" max="205" min="205" avg="205">
+            <date>
+                <day>03</day>
+                <temperature>205</temperature>
+                <avgTemperature>205</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1937" max="-425" min="-425" avg="-425">
+        <months value="Февраль" max="-425" min="-425" avg="-425">
+            <date>
+                <day>07</day>
+                <temperature>-425</temperature>
+                <avgTemperature>-425</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1911" max="75" min="75" avg="75">
+        <months value="Ноябрь" max="75" min="75" avg="75">
+            <date>
+                <day>11</day>
+                <temperature>75</temperature>
+                <avgTemperature>75</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1963" max="-110" min="-110" avg="-110">
+        <months value="Сентябрь" max="-110" min="-110" avg="-110">
+            <date>
+                <day>26</day>
+                <temperature>-110</temperature>
+                <avgTemperature>-110</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="2023" max="99" min="99" avg="99">
+        <months value="Март" max="99" min="99" avg="99">
+            <date>
+                <day>29</day>
+                <temperature>99</temperature>
+                <avgTemperature>99</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1958" max="-10" min="-10" avg="-10">
+        <months value="Апрель" max="-10" min="-10" avg="-10">
+            <date>
+                <day>09</day>
+                <temperature>-10</temperature>
+                <avgTemperature>-10</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="2013" max="-215" min="-215" avg="-215">
+        <months value="Февраль" max="-215" min="-215" avg="-215">
+            <date>
+                <day>26</day>
+                <temperature>-215</temperature>
+                <avgTemperature>-215</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="2003" max="5" min="5" avg="5">
+        <months value="Декабрь" max="5" min="5" avg="5">
+            <date>
+                <day>10</day>
+                <temperature>5</temperature>
+                <avgTemperature>5</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1973" max="-427" min="-427" avg="-427">
+        <months value="Июль" max="-427" min="-427" avg="-427">
+            <date>
+                <day>31</day>
+                <temperature>-427</temperature>
+                <avgTemperature>-427</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1954" max="-51" min="-51" avg="-51">
+        <months value="Август" max="-51" min="-51" avg="-51">
+            <date>
+                <day>16</day>
+                <temperature>-51</temperature>
+                <avgTemperature>-51</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1914" max="269" min="269" avg="269">
+        <months value="Январь" max="269" min="269" avg="269">
+            <date>
+                <day>11</day>
+                <temperature>269</temperature>
+                <avgTemperature>269</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="2031" max="211" min="211" avg="211">
+        <months value="Апрель" max="211" min="211" avg="211">
+            <date>
+                <day>13</day>
+                <temperature>211</temperature>
+                <avgTemperature>211</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1982" max="-43" min="-43" avg="-43">
+        <months value="Декабрь" max="-43" min="-43" avg="-43">
+            <date>
+                <day>05</day>
+                <temperature>-43</temperature>
+                <avgTemperature>-43</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1926" max="-245" min="-245" avg="-245">
+        <months value="Ноябрь" max="-245" min="-245" avg="-245">
+            <date>
+                <day>09</day>
+                <temperature>-245</temperature>
+                <avgTemperature>-245</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="2028" max="76" min="18" avg="47">
+        <months value="Февраль" max="18" min="18" avg="18">
+            <date>
+                <day>26</day>
+                <temperature>18</temperature>
+                <avgTemperature>18</avgTemperature>
+            </date>
+        </months>
+        <months value="Июнь" max="76" min="76" avg="76">
+            <date>
+                <day>02</day>
+                <temperature>76</temperature>
+                <avgTemperature>76</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1938" max="-386" min="-386" avg="-386">
+        <months value="Июль" max="-386" min="-386" avg="-386">
+            <date>
+                <day>15</day>
+                <temperature>-386</temperature>
+                <avgTemperature>-386</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1917" max="195" min="195" avg="195">
+        <months value="Октябрь" max="195" min="195" avg="195">
+            <date>
+                <day>12</day>
+                <temperature>195</temperature>
+                <avgTemperature>195</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1986" max="-258" min="-258" avg="-258">
+        <months value="Март" max="-258" min="-258" avg="-258">
+            <date>
+                <day>08</day>
+                <temperature>-258</temperature>
+                <avgTemperature>-258</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="2017" max="-524" min="-524" avg="-524">
+        <months value="Ноябрь" max="-524" min="-524" avg="-524">
+            <date>
+                <day>12</day>
+                <temperature>-524</temperature>
+                <avgTemperature>-524</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1957" max="-115" min="-115" avg="-115">
+        <months value="Октябрь" max="-115" min="-115" avg="-115">
+            <date>
+                <day>28</day>
+                <temperature>-115</temperature>
+                <avgTemperature>-115</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1960" max="-573" min="-573" avg="-573">
+        <months value="Сентябрь" max="-573" min="-573" avg="-573">
+            <date>
+                <day>01</day>
+                <temperature>-573</temperature>
+                <avgTemperature>-573</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1998" max="-173" min="-173" avg="-173">
+        <months value="Апрель" max="-173" min="-173" avg="-173">
+            <date>
+                <day>14</day>
+                <temperature>-173</temperature>
+                <avgTemperature>-173</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1922" max="-388" min="-388" avg="-388">
+        <months value="Сентябрь" max="-388" min="-388" avg="-388">
+            <date>
+                <day>03</day>
+                <temperature>-388</temperature>
+                <avgTemperature>-388</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1983" max="-433" min="-433" avg="-433">
+        <months value="Январь" max="-433" min="-433" avg="-433">
+            <date>
+                <day>11</day>
+                <temperature>-433</temperature>
+                <avgTemperature>-433</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1995" max="-146" min="-146" avg="-146">
+        <months value="Июль" max="-146" min="-146" avg="-146">
+            <date>
+                <day>18</day>
+                <temperature>-146</temperature>
+                <avgTemperature>-146</avgTemperature>
+            </date>
+        </months>
+    </years>
+    <years value="1933" max="-535" min="-535" avg="-535">
+        <months value="Апрель" max="-535" min="-535" avg="-535">
+            <date>
+                <day>28</day>
+                <temperature>-535</temperature>
+                <avgTemperature>-535</avgTemperature>
+            </date>
+        </months>
+    </years>
+</measurement>
