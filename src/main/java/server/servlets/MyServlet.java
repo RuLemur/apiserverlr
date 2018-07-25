@@ -27,18 +27,19 @@ public class MyServlet extends HttpServlet {
         InputJson inputJson = null;
         try {
             inputJson = om.readValue(req.getInputStream(), InputJson.class);
+            if (inputJson.getMeasurements().size() == 0) {
+                LOG.warn("Пришел пустой запрос");
+                resp.setStatus(500);
+                resp.getWriter().print("Ошибка: пустой запрос");
+                return;
+            }
         } catch (EOFException | NullPointerException e) {
             LOG.error("Пришел некорректный запрос", e);
             resp.setStatus(500);
-            resp.getWriter().println("Ошибка: некорректный запрос");
+            resp.getWriter().print("Ошибка: некорректный запрос");
             return;
         }
-        if (inputJson.getMeasurements().size() == 0) {
-            LOG.warn("Пришел пустой запрос");
-            resp.setStatus(500);
-            resp.getWriter().println("Ошибка: пустой запрос");
-            return;
-        }
+
 
         List<Measurement> measurements = MeasurementValidator.validateAllFile(inputJson);
 

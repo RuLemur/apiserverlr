@@ -1,5 +1,8 @@
 package server.servlets;
 
+import org.apache.log4j.Logger;
+import sun.rmi.runtime.Log;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,11 +14,13 @@ import java.io.IOException;
  * testSegmento
  */
 public class OtherServlet extends HttpServlet {
+    private static final Logger LOG = Logger.getLogger(OtherServlet.class);
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setCharacterEncoding("UTF-8");
         resp.setStatus(200);
 
-        resp.getWriter().println("Сервер для преобразования JSONа в отчет XML");
+        LOG.info("Пользователь обратился к другому аддресу");
+        resp.getWriter().print("Сервер для преобразования JSONа в отчет XML");
     }
 }
