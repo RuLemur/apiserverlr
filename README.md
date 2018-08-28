@@ -20,4 +20,29 @@
 ##Формат входного json
 Json представляет собой массив измерений температур (пары дата-температура). Любые элементы json, не описанные ниже, должны игнорироваться при обработке.
 
-
+`
+{
+  "measurements": [
+    {
+		"date": timestamp,
+    	"temperature": "t_value",
+    	"unit": "C"
+	}, 
+	{
+		"date": timestamp ,
+    	"temperature": "t_value"
+    },
+    {
+        "date": timestamp ,
+        "temperature": "t_value",
+     	"unit": "F"
+	},
+	{
+		"date": timestamp ,
+		"temperature": "t_value",
+		"unit": "K"
+	},
+	... 
+  ]
+}
+`
