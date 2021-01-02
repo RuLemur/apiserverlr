@@ -10,7 +10,7 @@
 
     <properties>
         <jackson-annotations-version>2.9.6</jackson-annotations-version>
-        <jackson-version>9.4.11.v20180605</jackson-version>
+        <jackson-version>11.0.0</jackson-version>
         <jackson-mapper-asl-version>1.9.13</jackson-mapper-asl-version>
         <log4j-version>1.2.17</log4j-version>
         <jackson-dataformat-xml>2.9.6</jackson-dataformat-xml>
